@@ -85,4 +85,55 @@
         };
     </script>
 </body>
+</html>    <script>
+        function processCode() {
+            const input = document.getElementById('input').value;
+            const lines = input.split('\n');
+            const processedLines = lines.map(line => line.replace(/^\s+/, ''));
+            const output = processedLines.join('\n');
+            document.getElementById('output').textContent = output;
+        }
+
+        function copyToClipboard() {
+            const output = document.getElementById('output').textContent;
+            navigator.clipboard.writeText(output).then(() => {
+                alert('Output copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert('Failed to copy to clipboard.');
+            });
+        }
+
+        function toggleTheme() {
+            const body = document.body;
+            const button = document.getElementById('theme-toggle');
+            if (body.classList.contains('dark-mode')) {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                button.textContent = 'Switch to Dark Mode';
+                localStorage.setItem('theme', 'light');
+            } else {
+                body.classList.remove('light-mode');
+                body.classList.add('dark-mode');
+                button.textContent = 'Switch to Light Mode';
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+
+        // Load saved theme
+        window.onload = () => {
+            const savedTheme = localStorage.getItem('theme');
+            const body = document.body;
+            const button = document.getElementById('theme-toggle');
+            if (savedTheme === 'light') {
+                body.classList.remove('dark-mode');
+                body.classList.add('light-mode');
+                button.textContent = 'Switch to Dark Mode';
+            } else {
+                body.classList.add('dark-mode');
+                button.textContent = 'Switch to Light Mode';
+            }
+        };
+    </script>
+</body>
 </html>
