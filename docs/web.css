@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Minecraft';
-    src: url('https://www.dafont.com/minecraft.font') format('woff2'),
-         url('https://www.dafont.com/minecraft.font') format('woff');
+    src: url('Minecraft.woff2') format('woff2'),
+         url('Minecraft.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
