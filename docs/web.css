@@ -1,11 +1,4 @@
-@font-face {
-    font-family: 'Minecraft';
-    src: url('Minecraft.woff2') format('woff2'),
-         url('Minecraft.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
+/* Using Press Start 2P as a fallback Minecraft-style font */
 body {
     margin: 20px;
     max-width: 900px;
@@ -25,7 +18,7 @@ body.light-mode {
 }
 
 .container {
-    font-family: 'Minecraft', 'Courier New', monospace;
+    font-family: 'Press Start 2P', 'Courier New', monospace;
     padding: 20px;
     border-radius: 10px;
 }
@@ -41,7 +34,7 @@ body.light-mode .container {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2em; /* Adjusted for pixel font readability */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: #00ccff;
 }
@@ -51,7 +44,7 @@ body.light-mode h1 {
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1em; /* Adjusted for pixel font */
 }
 
 textarea {
@@ -59,8 +52,8 @@ textarea {
     height: 250px;
     margin: 15px 0;
     padding: 10px;
-    font-family: 'Minecraft', 'Courier New', monospace;
-    font-size: 1em;
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    font-size: 0.9em;
     border-radius: 8px;
     transition: border-color 0.3s, background 0.3s;
 }
@@ -80,8 +73,8 @@ body.light-mode textarea {
 button {
     padding: 12px 24px;
     margin: 5px;
-    font-family: 'Minecraft', 'Courier New', monospace;
-    font-size: 1em;
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    font-size: 0.9em;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -123,8 +116,8 @@ body.light-mode #theme-toggle {
     padding: 15px;
     border-radius: 8px;
     min-height: 250px;
-    font-family: 'Minecraft', 'Courier New', monospace;
-    font-size: 1em;
+    font-family: 'Press Start 2P', 'Courier New', monospace;
+    font-size: 0.9em;
 }
 
 body.dark-mode #output {
